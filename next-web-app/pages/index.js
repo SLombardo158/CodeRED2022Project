@@ -11,8 +11,14 @@ export default function Home() {
         {/* <link href='../../styles/output.css>'></link> */}
       </Head>
       
-      <main >
-        <h2 className={"text-green-700"}> Please let there be something new? 2</h2>
+      <main className='h-screen bg-gradient-to-b from-slate-900 to-slate-800'>
+        {/* Headline Intorduction */}
+        <h1 className="flex items-center place-content-center pt-12 text-white text-6xl font-bold"> 
+          Something <a className='ml-4 underline text-blue-600 hover:text-blue-500' href=''>Amazing!</a>
+        </h1>
+
+        
+
       </main>
     </div>
   )
