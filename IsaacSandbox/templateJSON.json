@@ -1,0 +1,12 @@
+{
+    "eventDate":,
+    "eventTime":,
+    "location": {
+        "locZone":,
+        "gpsCoord":
+    },
+    "fieldSurveyInfo": {    
+        "audioRecording":,
+        "videoRecording":
+    }
+}
