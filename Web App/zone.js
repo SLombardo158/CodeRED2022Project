@@ -1,27 +1,40 @@
 class Zone{
-    constructor(x,y,width,height){
+    constructor(x,y,size,type){
         this.x=x;
         this.y=y;
-        this.width=width;
-        this.height=height;
+        this.size=size;
+        this.type=type;
 
-        this.sensor=new Sensor(this);
+
+        //this.sensor=new Sensor(this);
     }
 
     draw(ctx){
         ctx.save();
         ctx.translate(this.x,this.y);
         ctx.rotate(-this.angle);
-        //ctx.strokeStyle="yellow";
+        const img = new Image();   // Create new img element
+        
+        if(this.type == "battery"){
+            ctx.strokeStyle="yellow";
+            /*img.addEventListener('load', () => {
+                ctx.drawImage(img, 0,0)// execute drawImage statements here
+            }, false);
+            img.src = 'charge.png'; // Set source path*/
+        }
+        else {
+            ctx.strokeStyle="white";
+            /*img.addEventListener('load', () => {
+                ctx.drawImage(img, 0, 0)// execute drawImage statements here
+            }, false);
+            img.src = 'wifi.png'; // Set source path*/
+        }
         ctx.beginPath();
         ctx.arc(
-            -this.width/2,
-            -this.height/2,
-            this.width,
-            this.height, 2*Math.PI
+           100, 75, this.size, 0, 2*Math.PI
         );
         ctx.stroke();
-        ctx.restore();
-
+        //ctx.restore();
+        
     }
 }
