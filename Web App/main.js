@@ -40,3 +40,40 @@ function animate(){
     ctx.restore();
     requestAnimationFrame(animate);
 }
+
+// a custom clock made with C++
+    /* input = 'y';
+    while (input != 'q'){
+        for (let h = 1; h <= 2; h++){ // hours
+            for (let m = 1; m <= 3; m++){ // min
+                for (let s = 1; s <= 4; s++){ // sec
+                    for (let t = 1; t <= 5; t++){} // delay
+                    cout << "sec: " << s << endl;
+                    // every sec that passes :
+                    // record a second
+                    reduceStorage(car);
+                    
+                    
+                    // if at internet zone: -10GB
+                  if(zone==){
+                    uploadStorage(car);
+                  }
+                    
+                }
+                // every min:
+                // if at chargin station : +1% battery
+              
+                // check for nearest zone:
+                
+                
+            }
+            // Every hour:
+            // if moving : -1% battery
+            // if resting: -0.25% battery
+            stateBatteryReduction(car);
+            
+        }
+        cout << "input: ";
+        cin >> input;
+        cout << endl;
+    }*/
