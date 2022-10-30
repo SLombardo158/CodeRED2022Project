@@ -13,7 +13,7 @@ class Car{
         this.battery=100; //min is 0
 
         //if(controlType!="DUMMY"){
-            this.sensor=new Sensor(this);
+        this.sensor=new Sensor(this);
             /*this.brain=new NeuralNetwork(
                 [this.sensor.rayCount,6,4]
             );*/
@@ -23,6 +23,7 @@ class Car{
 
     update(zoneBorders){
         this.#move();
+        //this.sensor.update();
         this.polygon=this.#createPolygon;
         this.sensor.update(zoneBorders);
     }
