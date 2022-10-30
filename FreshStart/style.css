@@ -5,7 +5,7 @@ body{
     text-align:center;
 }
 #myCanvas{
-    background:rgba(210, 99, 59, .25);
+    background:rgba(210, 99, 59, 1);
 }
 
 #overlay {

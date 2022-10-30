@@ -8,7 +8,7 @@ class Car{
         this.height=height;
         this.speed=0;
         this.acceleration=0.2;
-        this.maxSpeed=2;
+        this.maxSpeed=.8;
         this.friction=0.05;
         this.angle=0;
         this.alert = false;
@@ -16,12 +16,12 @@ class Car{
         this.batterylevel = 100;
         this.batterydegrade = .05;
         this.batteryalert = false;
-        this.batteryincrease = .12;
+        this.batteryincrease = .10;
 
         this.storagealert = false;
         this.storagelevel = 10;
         this.storageincrease = 0.05;
-        this.storagedegrade = 0.005;
+        this.storagedegrade = 0.001;
 
         this.sensor=new Sensor(this);
         this.controls = new controls();    
@@ -36,16 +36,18 @@ class Car{
 
     #move(){
         if(this.storagelevel > 1){
-            this.storagelevel-=this.storagedegrade;}
-            document.getElementById("ssd").innerText = Math.floor(this.storagelevel,-2);
-            
+            this.storagelevel-=this.storagedegrade;
+        } 
+        document.getElementById("ssd").innerText = Math.floor(this.storagelevel,-2);
+        
+
         if(this.controls.forward){
             this.speed+=this.acceleration;
             document.getElementById("x").innerText = Math.floor(this.x,-2);
             document.getElementById("y").innerText = Math.floor(this.y,-2);
             if(this.batterylevel > 0){this.batterylevel-=this.batterydegrade;}
             document.getElementById("bp").innerText = Math.floor(this.batterylevel,-2);
-            if(this.batterylevel == 0){
+            if(this.batterylevel <= 0){
                 this.maxSpeed=0;
                 this.batterylevel=0; 
                 this.batteryalert = true;
@@ -58,7 +60,7 @@ class Car{
             document.getElementById("y").innerText = Math.floor(this.y,-2);
             if(this.batterylevel > 0){this.batterylevel-=this.batterydegrade;}
             document.getElementById("bp").innerText = Math.floor(this.batterylevel,-2);
-            if(this.batterylevel == 0){
+            if(this.batterylevel <= 0){
                 this.maxSpeed=0;
                 this.batterylevel=0;
                 this.batteryalert = true;
