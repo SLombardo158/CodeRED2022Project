@@ -21,13 +21,13 @@ function animate(){
     canvas.height=window.innerHeight;
 
     ctx.save();
-    //ctx.translate(0,-car.y);
+    //ctx.translate(-car.x,-car.y);
+    //ctx.restore();
     /*img.addEventListener('load', () => {
         ctx.drawImage(img)// execute drawImage statements here
     }, false);
     img.src = 'charge.png'; // Set source path*/
     hotel.draw(ctx);
-   
     golf.draw(ctx);
     foxtrot.draw(ctx);
     echo.draw(ctx);

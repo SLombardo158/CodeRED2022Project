@@ -6,8 +6,13 @@ class Zone{
         this.type=type;
         this.width=size;
         this.height=size;
+        //this.length=size;
+        /*this.left=x-size;
+        this.right=x+size;
+        this.top=y+size;
+        this.bottom=y-size;*/
 
-        const topLeft={x:this.left,y:this.top}
+        const topLeft={x:this+50,y:this+0}
         const topRight={x:this.right,y:this.top}
         const bottomLeft={x:this.left,y:this.bottom}
         const bottomRight={x:this.right,y:this.bottom}
@@ -52,6 +57,11 @@ class Zone{
         );
         ctx.stroke();
         //ctx.restore();
-        
+        this.borders.forEach(border=>{
+            ctx.beginPath();
+            ctx.moveTo(border[0].x,border[0].y)
+            ctx.lineTo(border[1].x, border[1].y);
+            ctx.stroke();
+        });
     }
 }
