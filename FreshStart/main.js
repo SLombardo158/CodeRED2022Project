@@ -13,6 +13,8 @@ const beta = new Zone(640,-40,45,"internet");
 const alpha = new Zone(580,10,50,"internet");
 const car = new Car(-850,400,20,20);
 
+const alert = true;
+
 animate();
 
 function animate(){
@@ -40,3 +42,4 @@ function animate(){
     ctx.restore();
     requestAnimationFrame(animate);
 }
+
