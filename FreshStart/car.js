@@ -35,6 +35,10 @@ class Car{
     }
 
     #move(){
+        if(this.storagelevel > 1){
+            this.storagelevel-=this.storagedegrade;}
+            document.getElementById("ssd").innerText = Math.floor(this.storagelevel,-2);
+            
         if(this.controls.forward){
             this.speed+=this.acceleration;
             document.getElementById("x").innerText = Math.floor(this.x,-2);
@@ -116,7 +120,7 @@ class Car{
             document.getElementById("ssd").innerText = Math.floor(this.storagelevel,-2);
         }
         if(this.x > 56 && this.x < 150 && this.y < 120 && this.y > 35 && this.storagelevel < 10) {
-            console.log("In the zone");
+            console.log("In the storage zone");
             this.storagelevel+=this.storageincrease;
             document.getElementById("ssd").innerText = Math.floor(this.storagelevel,-2);
         }
