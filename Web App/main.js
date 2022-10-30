@@ -6,22 +6,22 @@ const ctx = canvas.getContext("2d");
 const hotel = new Zone(1350,150,30,"battery"); //farthest right
 const golf = new Zone(-30,200,40,"internet");
 const foxtrot = new Zone(-600,-80,80,"battery"); //middle
-const echo = new Zone(-200,300,30,"battery");
-const delta = new Zone(-400,-10,80,"internet"); //most bottom
+const echo = new Zone(-200,200,30,"battery");
+const delta = new Zone(-400,-100,80,"internet"); //most bottom
 const charlie = new Zone(-100,-350,30,"battery");
-const beta = new Zone(640,-140,45,"internet");
-const alpha = new Zone(580,-50,50,"internet");
+const beta = new Zone(640,-40,45,"internet");
+const alpha = new Zone(580,10,50,"internet");
 const car = new Car(-850,400,20,20);
 
 animate();
 
 function animate(){
-    car.update();
+    car.update(hotel.borders);
 
     canvas.height=window.innerHeight;
 
     ctx.save();
-    //ctx.translate(0,-car.y+canvas.height*0.5); 1:01:37
+    //ctx.translate(0,-car.y);
     /*img.addEventListener('load', () => {
         ctx.drawImage(img)// execute drawImage statements here
     }, false);
