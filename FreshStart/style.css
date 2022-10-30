@@ -1,0 +1,13 @@
+body{
+    margin:0;
+    background: white;
+    overflow:hidden;
+    text-align:center;
+}
+#myCanvas{
+    background:rgba(210, 99, 59, .25);
+}
+
+#overlay {
+    position: absolute;
+  }

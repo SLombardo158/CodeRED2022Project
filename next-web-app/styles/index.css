@@ -2,3 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components {
+    .main {
+        @apply h-screen bg-gradient-to-b from-slate-900 to-slate-800;
+    }   
+
+    #__next {
+        @apply max-h-screen
+    }
+
+    
+}
+
